@@ -1,0 +1,19 @@
+<label for={{inputId}}>{{label}}</label>
+<div class="input-group input-append">
+  {{#power-select selected=selected
+                  tabindex=tabindex
+                  onchange=(action "updateModelForSelected")
+                  options=options
+                  renderInPlace=true
+                  allowClear=allowClear
+                  searchPlaceholder=searchPlaceholder
+                  placeholder=placeholder
+                  onfocus=(action "openDropdown")
+                  onclose=(action "onclose")
+                  onkeydown=(action "tabCloseDropdown")
+                  search=(perform performSearch)
+                  as |selectedField| }}
+    <span class="short-name">{{selectedField.shortName}}</span>
+    {{selectedField.name}}
+  {{/power-select}}
+</div>

@@ -1,0 +1,17 @@
+<button {{action "toggleSomeFlag"}}>toggleFlag</button>
+
+{{#if someFlag}}
+  {{power-select-search label="product (A)"
+                        modelName="product"
+                        selected=selectedItem
+                        options=products
+                        updateModel="updateProduct"
+                        onchange=(action "updateProduct") }}
+{{else}}
+  {{power-select-search label="product (B)"
+                        modelName="product"
+                        selected=selectedItem
+                        options=products
+                        updateModel="updateProduct"
+                        onchange=(action "updateProduct") }}
+{{/if}}
