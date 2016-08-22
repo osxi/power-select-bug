@@ -39,12 +39,7 @@ export default Ember.Component.extend({
       this.set('placeholder', "");
     },
 
-    tabCloseDropdown(select, e) {
-      if (e.keyCode === 9 && select.isOpen) {
-        this.set('selected', select.highlighted);
-        select.actions.close();
-      }
-    },
+    keyDownPressed: Ember.K,
 
     updateModelForSelected(model) {
       let modelId = model ? model.id : null;

@@ -10,7 +10,7 @@
                   placeholder=placeholder
                   onfocus=(action "openDropdown")
                   onclose=(action "onclose")
-                  onkeydown=(action "tabCloseDropdown")
+                  onkeydown=(action "keyDownPressed")
                   search=(perform performSearch)
                   as |selectedField| }}
     <span class="short-name">{{selectedField.shortName}}</span>
